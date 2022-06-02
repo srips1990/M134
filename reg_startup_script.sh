@@ -2,13 +2,13 @@
 
 source yobichain.conf
 
-homedir=`su -l $linux_admin_user -c 'cd ~ && pwd'`
+homedir=`su -l $linux_user -c 'cd ~ && pwd'`
 
 ### Creating Startup Script
 
 cat > $homedir/$startup_script_name << EOF
 
-sudo su -l $linux_admin_user -c "multichaind $chainname -daemon -explorersupport=2"
+su -l $linux_user -c "multichaind $chainname -daemon -explorersupport=2"
 
 EOF
 
