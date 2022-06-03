@@ -145,7 +145,7 @@ echo '----------------------------------------'
 echo -e 'LOADING CONFIGURATION.....'
 echo '----------------------------------------'
 
-sleep 6
+sleep 1
 
 addr=`curl --user $rpcuser:$rpcpassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddresses", "params": [] }' -H 'content-type: text/json;' http://127.0.0.1:$rpcport | jq -r '.result[0]'`
 
