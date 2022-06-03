@@ -86,10 +86,10 @@ fi
 
 
 if [ -d $chaindir ]; then
-	# echo -e 'Stopping existing processes if any...'
-	# echo ''
-	# echo ''
-	# su -l $linux_user -c 'multichain-cli '$chainname' stop >/dev/null 2>&1'
+	echo -e 'Stopping existing processes if any...'
+	echo ''
+	echo ''
+	su -l $linux_user -c 'multichain-cli '$chainname' stop >/dev/null || :'
 	echo -e 'Removing the existing chain directory...'
 	echo ''
 	echo ''
